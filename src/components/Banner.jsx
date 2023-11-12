@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import bannerImage from "../assets/Banner_image.svg";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 import Typed from "typed.js";
 
 const Banner = () => {
     // Create Ref element.
-    const el = useRef(null);
+    const el= useRef(null);
 
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -16,6 +16,7 @@ const Banner = () => {
             backSpeed: 10,
             backDelay: 100,
             loop:true
+        
         });
 
         // Destropying
@@ -37,7 +38,7 @@ const Banner = () => {
                 <div className="w-2/3  space-y-2 ms-10">
                     <h3 className="mt-3 text-3xl font-semibold">Hi, I am </h3>
                     <h1 className="mt-3 text-5xl font-bold">Bhabesh Ranjan Barik</h1>
-                    <h2 className="mt-3 text-3xl">I am a <span className="font-bold" ref={el} ></span></h2>
+                    <h2 className="mt-3 text-3xl">I am a <span className="font-bold" ref={el}></span></h2>
                     <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolor, tenetur incidunt velit deleniti dicta aut molestias eveniet quibusdam earum impedit corrupti nam vero modi quae enim atque maxime? Aliquam rem, reprehenderit at voluptatum quod dolorem asperiores inventore neque placeat quis quae voluptatibus repudiandae laboriosam minus ad a quibusdam iure?</p>
                     <div className="icon-container space-x-5">
                         <i class="fa-brands text-4xl hover:text-blue-950 fa-facebook"></i>
