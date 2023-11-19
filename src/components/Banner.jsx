@@ -5,7 +5,7 @@ import Typed from "typed.js";
 
 const Banner = () => {
     // Create Ref element.
-    const el= useRef(null);
+    const el = useRef(null);
 
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -15,8 +15,8 @@ const Banner = () => {
             typeSpeed: 50,
             backSpeed: 10,
             backDelay: 100,
-            loop:true
-        
+            loop: true
+
         });
 
         // Destropying
@@ -39,7 +39,8 @@ const Banner = () => {
                     <h3 className="mt-3 text-3xl font-semibold">Hi, I am </h3>
                     <h1 className="mt-3 text-5xl font-bold">Bhabesh Ranjan Barik</h1>
                     <h2 className="mt-3 text-3xl">I am a <span className="font-bold" ref={el}></span></h2>
-                    <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolor, tenetur incidunt velit deleniti dicta aut molestias eveniet quibusdam earum impedit corrupti nam vero modi quae enim atque maxime? Aliquam rem, reprehenderit at voluptatum quod dolorem asperiores inventore neque placeat quis quae voluptatibus repudiandae laboriosam minus ad a quibusdam iure?</p>
+                    <p className="mt-3">
+                        Welcome to my digital space! As a dedicated software engineer, I bring passion and proficiency to every project. With a foundation in diverse technologies, I specialize in crafting efficient and scalable solutions. From front-end elegance to back-end robustness, I thrive in turning complex challenges into elegant, user-centric solutions. Explore my portfolio to witness a fusion of innovation and precision, showcasing my proficiency in languages like JavaScript ,Java and their latest frameworks. With a keen eye for detail and a commitment to excellence, I am driven to create seamless, cutting-edge software experiences. Let's embark on a journey of code where possibilities are limitless.</p>
                     <div className="icon-container space-x-5">
                         <i class="fa-brands text-4xl hover:text-blue-950 fa-facebook"></i>
                         <i class="fa-brands text-4xl hover:text-blue-950 fa-instagram"></i>
