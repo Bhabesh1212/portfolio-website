@@ -21,6 +21,7 @@ function App() {
       <Banner/>
       <About/>
       <Services/>
+      
       <Expertise/>
       <Footer/>
     </>
