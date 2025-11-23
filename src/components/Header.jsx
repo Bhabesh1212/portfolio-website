@@ -2,10 +2,18 @@ import { useState } from "react";
 
 const Header=()=>{
     const [barndName,setBrandName] =useState("Bhabesh Ranjan Barik");
+
+    const openEmailPopup = () => {
+        const confirmed = window.confirm("Do you want to contact me via email?");
+        if (confirmed) {
+            window.location.href = "mailto:bhabesh.barik.dev@gmail.com";
+        }
+    };
+
     const [menuLinks, setMenuLinks]=useState([
         {
             title:"Home",
-            link:"/home",
+            link:"https://bhabesh1212.github.io/portfolio-website/",
             id:1
         }
         ,
@@ -20,9 +28,10 @@ const Header=()=>{
             id:3
         },
         {
-            title:"Contacts",
-            link:"/Contacts",
-            id:4
+            title: "Contacts",
+            link: "#",   // prevent direct mail opening
+            id: 4,
+            action: openEmailPopup
         }
     ]);
     const [actionButton, setActionButton]= useState({
@@ -37,15 +46,21 @@ const Header=()=>{
                 <h1 className="text-xl font-bold">{barndName}</h1>
             </div>
             <div className="space-x-6">
-                {/* Menu Link */}
-                {menuLinks.map((link) =>(
-                <a key={link.id} href={link.link} className="hover:text-orange-600">{link.title}</a>
-                )                             
-                )}
-                
-                {/* <a href="/about" className="hover:text-orange-600">About</a>
-                <a href="/skill" className="hover:text-orange-600">Skill</a>
-                <a href="/Contacts" className="hover:text-orange-600">Contacts</a> */}
+                {menuLinks.map((item) => (
+                    <a
+                        key={item.id}
+                        href={item.link}
+                        onClick={(e) => {
+                            if (item.action) {
+                                e.preventDefault();   // stop default link
+                                item.action();        // run popup
+                            }
+                        }}
+                        className="hover:text-orange-600 cursor-pointer"
+                    >
+                        {item.title}
+                    </a>
+                ))}
             </div>
             <div>
                 {/* Button */}

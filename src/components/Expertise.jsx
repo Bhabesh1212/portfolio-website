@@ -18,7 +18,7 @@ const Expertise = () => {
                         {/* text-container    */}
                         <div className="w-2/3 text-center space-y-4">
                             <h1 className="text-4xl font-bold">I Love These Technology</h1>
-                            <p>In the digital tapestry, I find a canvas where creativity and logic dance hand in hand. With every advancement, my affection deepens, a testament to the transformative power of the ever-evolving tapestry of technologies. In a world pulsating with innovation, my heart resonates with an unwavering love for technologies.</p>
+                            <p>I am deeply passionate about technology and its continuous evolution. With every new advancement, my interest grows stronger. I value how modern technologies simplify processes, drive innovation, and create meaningful business impact. My focus is on leveraging technology to build efficient, scalable, and future-ready solutions.</p>
                             <button className="px-4 py-2 font-semibold bg-orange-500 rounded-full shadow-lg hover:text-white">Hire Me</button>
                         </div>
 
@@ -40,6 +40,12 @@ const Expertise = () => {
                             </p>
                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
                                 Spring Security
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                JWT
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Spring Cloud
                             </p>
                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
                                 Hibernate(ORM Tool)
@@ -64,6 +70,27 @@ const Expertise = () => {
                             </p>
                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
                                 NOSql
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                kafka
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Docker
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Jenkins
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Kubernetes
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Load Balancer
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                Spring Cloud
+                            </p>
+                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
+                                AWS
                             </p>
                         </div>
 

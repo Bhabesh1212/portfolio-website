@@ -4,9 +4,9 @@ import userImage from "../assets/Banner_image.svg";
 const About = () => {
    const[data, setData]= useState({
         image: userImage,
-        title: "Java Developer",
-        desc1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam dolorem temporibus voluptatibus at molestiae, cum architecto omnis ipsum sit aspernatur?",
-        desc2: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repellat dolorum officia qui in quae incidunt amet possimus quos placeat sapiente dicta eligendi molestiae expedita exercitationem commodi nihil ab, alias nesciunt at voluptatibus non aperiam voluptas consequatur. Maiores, illo voluptate?",
+        title: "Software Engineer",
+        desc1: "I am a Software Engineer with experience in Java, Spring Boot, Microservices, and API Gateway-based architectures. My expertise includes building modular services, implementing secure authentication flows (JWT, OAuth), integrating REST/Kafka-based communication, and optimizing backend performance.",
+        desc2: "I have hands-on exposure to Docker, CI/CD pipelines, Cloud services, and production-grade design patterns. With a strong interest in system design and real-world problem-solving, I aim to build reliable, scalable, and maintainable backend applications while continuously learning and adapting to modern engineering practices",
         actionButton:{
             title:"Read More...",
             link:"/readMore"

@@ -42,13 +42,13 @@ const Banner = () => {
                     <p className="mt-3">
                         Welcome to my digital space! As a dedicated software engineer, I bring passion and proficiency to every project. With a foundation in diverse technologies, I specialize in crafting efficient and scalable solutions. From front-end elegance to back-end robustness, I thrive in turning complex challenges into elegant, user-centric solutions. Explore my portfolio to witness a fusion of innovation and precision, showcasing my proficiency in languages like JavaScript ,Java & their latest frameworks and their deployment. With a keen eye for detail and a commitment to excellence, I am driven to create seamless, cutting-edge software experiences. Let's embark on a journey of code where possibilities are limitless</p>
                     <div className="icon-container space-x-5">
-                        <i class="fa-brands text-4xl hover:text-blue-950 fa-facebook"></i>
-                        <i class="fa-brands text-4xl hover:text-blue-950 fa-instagram"></i>
-                        <i class="fa-brands text-4xl hover:text-blue-950 fa-linkedin"></i>
-                        <i class="fa-brands text-4xl hover:text-blue-950 fa-github"></i>
+                        {/* <i class="fa-brands text-4xl hover:text-blue-950 fa-facebook"></i> */}
+                        <a href="https://www.instagram.com/worldofbhabesh/"><i class="fa-brands text-4xl hover:text-blue-950 fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bhabesh-%E2%80%8Branjan-barik-42699b127?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands text-4xl hover:text-blue-950 fa-linkedin"></i></a>
+                        <a href="https://github.com/Bhabesh1212"><i class="fa-brands text-4xl hover:text-blue-950 fa-github"></i></a>
                     </div>
-                    <br></br>
-                    <a className="px-4 py-2 bg-orange-500 shadow-lg text-black rounded-full hover:text-white" href="/contact-me">Contact Me</a>
+                    {/* <br></br>
+                    <a className="px-4 py-2 bg-orange-500 shadow-lg text-black rounded-full hover:text-white" href="/contact-me">Contact Me</a> */}
                 </div>
             </div>
 
