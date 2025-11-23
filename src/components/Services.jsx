@@ -7,7 +7,7 @@ const Services = () => {
             id: '1',
             imagelink: "text-5xl fa-brands fa-aws",
             title: "Web Developement",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!",
+            description: "I have a strong enthusiasm for modern web development and the rapid progress shaping the digital landscape. Each new tool, framework, or architectural approach inspires me to craft more intuitive and high-performing applications. I appreciate how today’s web technologies improve efficiency, elevate user experience, and support strategic business objectives. My goal is to apply advanced web practices to deliver reliable, scalable, and impactful solutions !",
             actionButton: {
                 title: "Check here",
                 link: "/check-here"
@@ -17,22 +17,23 @@ const Services = () => {
             id: '2',
             imagelink: "text-5xl fa-solid fa-server",
             title: "Backend Developement",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!",
-            actionButton: {
-                title: "Check here",
-                link: "/check-here"
-            }
-        },
-        {
-            id: '3',
-            imagelink: "text-5xl fa-solid fa-mobile-screen",
-            title: "Android Developement",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!",
+            description: "I have a strong commitment to backend development and the evolving engineering practices that power modern systems. Emerging patterns, tools, and platforms motivate me to design more resilient and high-performing services. I value how advanced backend technologies optimize operations, strengthen system reliability, and enable strategic business capabilities. My aim is to apply robust architectural principles to build secure, scalable, and impactful backend solutions !",
             actionButton: {
                 title: "Check here",
                 link: "/check-here"
             }
         }
+        // ,
+        // {
+        //     id: '3',
+        //     imagelink: "text-5xl fa-solid fa-mobile-screen",
+        //     title: "Android Developement",
+        //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!",
+        //     actionButton: {
+        //         title: "Check here",
+        //         link: "/check-here"
+        //     }
+        // }
     ]);
     return (
         <>

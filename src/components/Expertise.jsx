@@ -18,7 +18,7 @@ const Expertise = () => {
                         {/* text-container    */}
                         <div className="w-2/3 text-center space-y-4">
                             <h1 className="text-4xl font-bold">I Love These Technology</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate obcaecati ducimus odit animi. Neque eius, asperiores nostrum ducimus tenetur excepturi aliquid natus cumque laudantium! Enim obcaecati saepe odit corrupti atque.</p>
+                            <p>In the digital tapestry, I find a canvas where creativity and logic dance hand in hand. With every advancement, my affection deepens, a testament to the transformative power of the ever-evolving tapestry of technologies. In a world pulsating with innovation, my heart resonates with an unwavering love for technologies.</p>
                             <button className="px-4 py-2 font-semibold bg-orange-500 rounded-full shadow-lg hover:text-white">Hire Me</button>
                         </div>
 

@@ -9,7 +9,7 @@ const Banner = () => {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Backend Developer", "Web Developer", "Android Developer"], // Strings to display
+            strings: ["Backend Developer", "Web Developer"], // Strings to display
             // Speed settings, try diffrent values untill you get good results
             startDelay: 100,
             typeSpeed: 50,
@@ -40,7 +40,7 @@ const Banner = () => {
                     <h1 className="mt-3 text-5xl font-bold">Bhabesh Ranjan Barik</h1>
                     <h2 className="mt-3 text-3xl">I am a <span className="font-bold" ref={el}></span></h2>
                     <p className="mt-3">
-                        Welcome to my digital space! As a dedicated software engineer, I bring passion and proficiency to every project. With a foundation in diverse technologies, I specialize in crafting efficient and scalable solutions. From front-end elegance to back-end robustness, I thrive in turning complex challenges into elegant, user-centric solutions. Explore my portfolio to witness a fusion of innovation and precision, showcasing my proficiency in languages like JavaScript ,Java and their latest frameworks. With a keen eye for detail and a commitment to excellence, I am driven to create seamless, cutting-edge software experiences. Let's embark on a journey of code where possibilities are limitless</p>
+                        Welcome to my digital space! As a dedicated software engineer, I bring passion and proficiency to every project. With a foundation in diverse technologies, I specialize in crafting efficient and scalable solutions. From front-end elegance to back-end robustness, I thrive in turning complex challenges into elegant, user-centric solutions. Explore my portfolio to witness a fusion of innovation and precision, showcasing my proficiency in languages like JavaScript ,Java & their latest frameworks and their deployment. With a keen eye for detail and a commitment to excellence, I am driven to create seamless, cutting-edge software experiences. Let's embark on a journey of code where possibilities are limitless</p>
                     <div className="icon-container space-x-5">
                         <i class="fa-brands text-4xl hover:text-blue-950 fa-facebook"></i>
                         <i class="fa-brands text-4xl hover:text-blue-950 fa-instagram"></i>
