@@ -1,104 +1,117 @@
-import bannerBackground from "../assets/banner_wallpaper.svg";
-
 const Expertise = () => {
-    return (
-        <>
-            <div className="my-8">
-                <h1 className=" text-4xl underline font-bold text-center">
-                    My Expertise
-                </h1>
-                {/* box section */}
-                <div style={{
-                    backgroundImage: `url(${bannerBackground})`,
-                    backgroundSize: "cover"
-                }
-                } className="box-container items-center flex mt-10">
+  return (
+    <div className="my-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-center">
+        Skills & Tools
+      </h1>
 
-                    <div className="flex justify-center">
-                        {/* text-container    */}
-                        <div className="w-2/3 text-center space-y-4">
-                            <h1 className="text-4xl font-bold">I Love These Technology</h1>
-                            <p>I am deeply passionate about technology and its continuous evolution. With every new advancement, my interest grows stronger. I value how modern technologies simplify processes, drive innovation, and create meaningful business impact. My focus is on leveraging technology to build efficient, scalable, and future-ready solutions.</p>
-                            <button className="px-4 py-2 font-semibold bg-orange-500 rounded-full shadow-lg hover:text-white">Hire Me</button>
-                        </div>
+      {/* BOX SECTION */}
+      <div
+        className="
+          mt-10 
+          w-full 
+          py-14 
+          px-6 
+          md:px-20 
+          flex 
+          flex-col 
+          md:flex-row 
+          items-center 
+          justify-center 
+          gap-12
+          bg-slate-900
+          text-white
+          rounded-xl
+        "
+      >
+        {/* LEFT TEXT SECTION */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+          <div className="w-full md:max-w-md text-center md:text-left space-y-5">
+            <h1 className="text-3xl md:text-4xl font-bold">
+              I Love These Technologies
+            </h1>
 
-                    </div>
-                    <div className="flex justify-center ">
-                        {/* skill-container    */}
-                        <div className="flex justify-center flex-wrap space-x-3 w-2/3 h-fit">
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Core Java
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                J2EE
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Spring Framework
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Spring Boot Framework
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Spring Security
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                JWT
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Spring Cloud
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Hibernate(ORM Tool)
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Web Services(Rest & Soap)
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Micro-services
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Tailwind CSS
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                ReactJS
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                State Management
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                SQL
-                            </p>
-                            <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                NOSql
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                kafka
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Docker
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Jenkins
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Kubernetes
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Load Balancer
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                Spring Cloud
-                            </p>
-                             <p className="bg-gray-300 w-fit px-3 py-2 mt-2 hover:bg-orange-500 cursor-pointer rounded-full">
-                                AWS
-                            </p>
-                        </div>
+            <p className="text-base md:text-lg leading-relaxed">
+              I am deeply passionate about technology and its continuous
+              evolution...
+            </p>
 
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+            <p className="text-base md:text-lg leading-relaxed">
+              My focus is on leveraging technology to build efficient and
+              scalable solutions.
+            </p>
+            <p></p>
+            <a
+              href="https://www.linkedin.com/in/bhabesh-%E2%80%8Branjan-barik-42699b127"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                px-6 py-2 font-semibold 
+                bg-[#20C4CB]
+                rounded-full 
+                shadow-lg 
+                hover:bg-[#20C4CB]
+                hover:text-white 
+                transition
+              "
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+
+        {/* RIGHT SKILL SECTION */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 w-full md:max-w-lg">
+            {[
+              "Core Java",
+              "J2EE",
+              "Spring Framework",
+              "Spring Boot",
+              "Spring Security",
+              "JWT",
+              "Spring Cloud",
+              "Hibernate",
+              "REST & SOAP",
+              "Microservices",
+              "Tailwind CSS",
+              "ReactJS",
+              "State Management",
+              "SQL",
+              "NoSQL",
+              "Kafka",
+              "Docker",
+              "Jenkins",
+              "Kubernetes",
+              "Load Balancer",
+              "AWS",
+            ].map((skill, index) => (
+              <p
+                key={index}
+                className="
+                  bg-gray-200 
+                  w-fit 
+                  px-4 
+                  py-2 
+                  rounded-full 
+                  mt-2 
+                  hover:bg-[#20C4CB] 
+                  hover:text-white 
+                  cursor-pointer 
+                  shadow
+                  text-black
+                  text-sm md:text-base
+                  transition
+                "
+              >
+                {skill}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Expertise;

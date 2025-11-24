@@ -1,72 +1,96 @@
 import { useState } from "react";
 
 const Services = () => {
+  const [services] = useState([
+    {
+      id: "1",
+      imagelink: "text-5xl fa-brands fa-aws",
+      title: "Web Development",
+      description:
+        "I have a strong enthusiasm for modern web development and the rapid progress shaping the digital landscape. Each new tool or framework inspires me to craft more intuitive, efficient, and high-performing applications.",
+      actionButton: {
+        title: "Check here",
+        link: "/check-here",
+      },
+    },
+    {
+      id: "2",
+      imagelink: "text-5xl fa-solid fa-server",
+      title: "Backend Development",
+      description:
+        "I am committed to backend engineering and modern system design. I focus on building scalable, reliable, secure, and high-performing backend services using best development practices.",
+      actionButton: {
+        title: "Check here",
+        link: "/check-here",
+      },
+    },
+  ]);
 
-    const [services, setServices] = useState([
-        {
-            id: '1',
-            imagelink: "text-5xl fa-brands fa-aws",
-            title: "Web Developement",
-            description: "I have a strong enthusiasm for modern web development and the rapid progress shaping the digital landscape. Each new tool, framework, or architectural approach inspires me to craft more intuitive and high-performing applications. I appreciate how today’s web technologies improve efficiency, elevate user experience, and support strategic business objectives. My goal is to apply advanced web practices to deliver reliable, scalable, and impactful solutions !",
-            actionButton: {
-                title: "Check here",
-                link: "/check-here"
-            }
-        },
-        {
-            id: '2',
-            imagelink: "text-5xl fa-solid fa-server",
-            title: "Backend Developement",
-            description: "I have a strong commitment to backend development and the evolving engineering practices that power modern systems. Emerging patterns, tools, and platforms motivate me to design more resilient and high-performing services. I value how advanced backend technologies optimize operations, strengthen system reliability, and enable strategic business capabilities. My aim is to apply robust architectural principles to build secure, scalable, and impactful backend solutions !",
-            actionButton: {
-                title: "Check here",
-                link: "/check-here"
-            }
-        }
-        // ,
-        // {
-        //     id: '3',
-        //     imagelink: "text-5xl fa-solid fa-mobile-screen",
-        //     title: "Android Developement",
-        //     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!",
-        //     actionButton: {
-        //         title: "Check here",
-        //         link: "/check-here"
-        //     }
-        // }
-    ]);
-    return (
-        <>
-            <div className="main-container py-14">
-                <h1 className="underline text-4xl text-center font-bold">My Services</h1>
-                <div className="service-container flex justify-center mt-10 space-x-5 px-10">
-                    {services.map((service) => (
-                        <div key={service.id}  className="cursor-pointer hover:bg-gray-200 shadow-lg rounded-xl service1 space-y-3 bg-slate-100 p-5 text-center">
-                            <i class={service.imagelink}></i>
-                            <h1 className="text-4xl">{service.title}</h1>
-                            <p>{service.description}</p>
-                            <br/>
-                            <a href={service.actionButton.link} className="px-3 py-2 bg-orange-600 rounded  hover:text-white">{service.actionButton.title}</a>
-                        </div>
+  return (
+    <>
+      <div className="py-14 bg-slate-900 text-white"> {/* ⭐ Single color background */}
+        <h1 className="underline text-3xl md:text-4xl text-center font-bold">
+          My Services
+        </h1>
 
-                    ))}
+        <div
+          className="
+            mt-10 
+            grid 
+            grid-cols-1 
+            md:grid-cols-2 
+            gap-8 
+            max-w-5xl 
+            mx-auto 
+            px-6
+          "
+        >
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="
+                bg-slate-800 
+                hover:bg-slate-700 
+                rounded-xl 
+                shadow-lg 
+                p-6 
+                text-center 
+                transition
+              "
+            >
+              <i className={`${service.imagelink} mb-4`}></i>
 
-                    {/* <div className="cursor-pointer hover:bg-gray-200 shadow-lg rounded-xl service2 space-y-3 bg-slate-100 p-5 text-center">
-                        <i class="text-5xl fa-solid fa-server"></i>
-                        <h1 className="text-4xl">Backend Developement</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!</p>
-                        <button className="px-3 py-2 bg-orange-600 rounded hover:text-white">Check here</button>
-                    </div>
-                    <div className="cursor-pointer hover:bg-gray-200 shadow-lg rounded-xl service3 space-y-3 bg-slate-100 p-5 text-center">
-                        <i class="text-5xl fa-solid fa-mobile-screen"></i>
-                        <h1 className="text-4xl">Android Developement</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni nisi, voluptates explicabo labore voluptatum earum maiores doloremque est quibusdam! Dolorum atque enim consequuntur, impedit doloribus odio dolorem qui fugiat!</p>
-                        <button className="px-3 py-2 bg-orange-600 rounded  hover:text-white">Check here</button>
-                    </div> */}
-                </div>
+              <h1 className="text-2xl md:text-3xl font-semibold mb-2">
+                {service.title}
+              </h1>
+
+              <p className="text-sm md:text-base leading-relaxed">
+                {service.description}
+              </p>
+
+              {/* <a
+                href={service.actionButton.link}
+                className="
+                  inline-block 
+                  mt-5 
+                  px-4 
+                  py-2 
+                  bg-orange-500 
+                  rounded-full 
+                  shadow 
+                  hover:bg-[#20C4CB] 
+                  hover:text-white 
+                  transition
+                "
+              >
+                {service.actionButton.title}
+              </a> */}
             </div>
-        </>
-    )
+          ))}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Services;
