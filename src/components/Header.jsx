@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const Header = () => {
   const pdfFile = `${import.meta.env.BASE_URL}bhabesh_ranjan_barik.pdf`;
+  const homeLink = import.meta.env.BASE_URL;
 
   const [brandName] = useState("Bhabesh Ranjan Barik");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,21 +15,11 @@ const Header = () => {
   };
 
   const menuLinks = [
-    // {
-    //   title: "Home",
-    //   link: "https://bhabesh1212.github.io/portfolio-website/",
-    //   id: 1,
-    // },
-    // {
-    //   title: "About",
-    //   link: "/portfolio-website/about",
-    //   id: 2,
-    // },
-    // {
-    //   title: "Skill",
-    //   link: "/portfolio-website/skill",
-    //   id: 3,
-    // },
+    {
+      title: "Home",
+      link: homeLink, // ⭐ CORRECT HOME LINK
+      id: 1,
+    },
     {
       title: "Contacts",
       link: "#",
@@ -39,6 +30,7 @@ const Header = () => {
 
   return (
     <header className="bg-gray-100 h-20 flex items-center px-6 md:px-16 shadow-lg fixed top-0 left-0 w-full z-50">
+      
       {/* Brand */}
       <h1 className="text-lg md:text-xl font-bold">{brandName}</h1>
 
@@ -71,7 +63,7 @@ const Header = () => {
 
       {/* Mobile Hamburger Menu */}
       <button
-        className="md:hidden ml-auto text-2xl"
+        className="md:hidden ml-auto text-3xl"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? "✖" : "☰"}
@@ -89,7 +81,7 @@ const Header = () => {
                   e.preventDefault();
                   item.action();
                 }
-                setIsMenuOpen(false); // close menu when clicked
+                setIsMenuOpen(false);
               }}
               className="hover:text-orange-600 cursor-pointer text-lg"
             >

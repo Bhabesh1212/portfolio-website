@@ -7,6 +7,8 @@ import About from './components/About'
 import Services from './components/Services'
 import Expertise from './components/Expertise'
 import Footer from './components/Footer'
+import WorkExperience from './components/WorkExperience'
+import KeyProjectsAndProduct from './components/KeyProjectsAndProduct'
 
 
 function App() {
@@ -19,9 +21,10 @@ function App() {
     </h1> */}
       <Header/>
       <Banner/>
+      <WorkExperience/>
+      <KeyProjectsAndProduct/>
       <About/>
       <Services/>
-      
       <Expertise/>
       <Footer/>
     </>

@@ -9,3 +9,10 @@ Currently, two official plugins are available:
 
 # Website Hosted in Github
  https://bhabesh1212.github.io/portfolio-website/
+
+ # Run this site
+ npm run dev
+
+ # Build new Hashes for vite
+ npm run build
+
