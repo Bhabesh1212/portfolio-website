@@ -2,26 +2,26 @@ const WorkExperience = () => {
   const experiences = [
     {
       id: 1,
-      role: "Software Engineer",
-      company: "XYZ Technologies Pvt. Ltd.",
-      duration: "2022 — Present",
+      role: "Software Engineer-2",
+      company: "IserveU Technologies Pvt. Ltd.",
+      duration: "2023 Feb — Present",
       description:
         "Working as a backend engineer specializing in Spring Boot, Microservices, API Gateway integrations, cloud deployments, and designing scalable backend architectures.",
     },
     {
       id: 2,
-      role: "Java Developer Intern",
-      company: "ABC Software Solutions",
-      duration: "2021 — 2022",
+      role: "Java Developer",
+      company: "Inspirisys Solutions Ltd",
+      duration: "2022 Nov — 2023 Jan",
       description:
         "Developed enterprise-grade REST APIs, optimized SQL queries, supported backend modules, and collaborated with senior developers to enhance system reliability and performance.",
     },
   ];
 
   return (
-    <div className="my-12 px-6">
+    <div className="py-3 my-12 px-6 bg-slate-900 text-white ">
       {/* ⭐ Heading (Kept as Requested) */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center">
+      <h1 className="underline text-3xl md:text-4xl font-bold text-center">
         Work Experience
       </h1>
 
@@ -31,7 +31,8 @@ const WorkExperience = () => {
           <div
             key={exp.id}
             className="
-              bg-slate-900 
+              bg-slate-800
+              hover:bg-slate-700  
               text-white 
               p-6 
               rounded-xl 

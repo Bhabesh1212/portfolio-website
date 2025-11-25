@@ -1,9 +1,6 @@
 const Expertise = () => {
   return (
     <div className="my-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-center">
-        Skills & Tools
-      </h1>
 
       {/* BOX SECTION */}
       <div
@@ -27,18 +24,14 @@ const Expertise = () => {
         {/* LEFT TEXT SECTION */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <div className="w-full md:max-w-md text-center md:text-left space-y-5">
-            <h1 className="text-3xl md:text-4xl font-bold">
-              I Love These Technologies
+            <h1 className="underline text-3xl md:text-4xl font-bold">
+              Skills & Tools
             </h1>
 
             <p className="text-base md:text-lg leading-relaxed">
-              I am deeply passionate about technology and its continuous
-              evolution...
-            </p>
-
-            <p className="text-base md:text-lg leading-relaxed">
               My focus is on leveraging technology to build efficient and
-              scalable solutions.
+              scalable solutions. I am deeply passionate about technology and its continuous
+              evolution...
             </p>
             <p></p>
             <a
@@ -50,7 +43,7 @@ const Expertise = () => {
                 bg-[#20C4CB]
                 rounded-full 
                 shadow-lg 
-                hover:bg-[#20C4CB]
+                hover:bg-[#0ddde4]
                 hover:text-white 
                 transition
               "

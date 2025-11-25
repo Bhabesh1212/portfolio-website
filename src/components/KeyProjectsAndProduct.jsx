@@ -2,10 +2,10 @@ const KeyProjectsAndProduct = () => {
   const projects = [
     {
       id: 1,
-      title: "Prepaid Card Transaction Switch",
-      product: "Fintech Payment Switch Engine",
+      title: "Prepaid Card Issuer Transaction Switch",
+      product: "Prepaid Card Issuer POS Switch",
       description:
-        "Designed and implemented prepaid card authorization, reconciliation, settlement, and issuer integrations with secure rule-based processing.",
+        "Did RuPay certification and implemented prepaid card authorization, reconciliation, settlement, and issuer integrations with secure rule-based processing.",
       techStack: [
         "Java",
         "Spring Boot",
@@ -36,7 +36,7 @@ const KeyProjectsAndProduct = () => {
     {
       id: 3,
       title: "3DS ACS Server Processing",
-      product: "Secure Authentication Engine",
+      product: "Secure Issuer Authentication Service",
       description:
         "Implemented full 3DS 2.x flow including CReq/CRes processing, JWE encryption, risk evaluation, and session expiry management.",
       techStack: [
@@ -52,26 +52,26 @@ const KeyProjectsAndProduct = () => {
   ];
 
   return (
-    <div className="my-12 px-6">
+    <div className="py-4 my-12 px-6 bg-slate-900 text-white">
       {/* MAIN HEADING */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center">
+      <h1 className="underline text-3xl md:text-4xl font-bold text-center">
         Key Projects & Product Highlights
       </h1>
 
       {/* SMALL HEADER TEXT BELOW */}
-      <p className="text-center text-gray-600 mt-2 text-sm md:text-base">
+      <p className="text-center text-gray-300 mt-2 text-sm md:text-base">
         A showcase of key projects, products, and technologies I have contributed to.
       </p>
 
       {/* PROJECT CARDS */}
-      <div className="mt-10 space-y-10 max-w-4xl mx-auto">
+      <div className="mt-10 space-y-7 max-w-4xl mx-auto">
 
         {projects.map((proj) => (
           <div
             key={proj.id}
             className="
-              bg-slate-900 
-              text-white 
+             bg-slate-800 
+             hover:bg-slate-700 
               p-6 
               rounded-xl 
               shadow-lg 

@@ -21,14 +21,14 @@ const Banner = () => {
     <div
       className="
         w-full
-        min-h-[55vh]        /* ⭐ Reduced height */
+        min-h-[45vh]        /* ⭐ Reduced height */
         flex
         justify-center
         items-center
         py-10               /* ⭐ Smaller padding */
         px-5
         md:px-12
-        bg-slate-900
+        bg-slate-800
         mt-16
       "
     >

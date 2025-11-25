@@ -20,14 +20,14 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-6 bg-gray-100 border-t flex flex-col items-center text-center px-5">
+    <footer className="py-6 bg-slate-900 border-t flex flex-col items-center text-center px-5">
 
       {/* ⭐ NEW HEADING */}
-      <h1 className="text-lg md:text-xl font-bold text-gray-700 mt-8 mb-2">
+      <h1 className="text-2xl md:text-2xl font-bold text-white mt-8 mb-2">
         Let’s Connect & Collaborate
       </h1>
 
-      <p className="text-sm text-gray-700 max-w-xl">
+      <p className="text-sm text-gray-300 max-w-xl">
         I am always open to discussing new opportunities, product challenges, 
         and innovative ideas in the digital space.
       </p>
@@ -36,12 +36,11 @@ const Footer = () => {
       <div
         className="
           mt-4
-          bg-gray-800
-          border
-          border-gray-700
+        bg-slate-800 
+        hover:bg-slate-700 
           rounded-xl
           shadow-lg
-          p-5
+          p-6
           w-full
           max-w-3xl
           grid
@@ -57,7 +56,7 @@ const Footer = () => {
           <span className="font-semibold">Email</span>
           <a
             href="mailto:bhabesh.barik.dev@gmail.com"
-            className="text-[#20C4CB] hover:underline break-all mt-1"
+            className="text-gray-300 hover:underline break-all mt-1"
           >
             bhabesh.barik.dev@gmail.com
           </a>
@@ -66,25 +65,25 @@ const Footer = () => {
         {/* MOBILE */}
         <div className="flex flex-col items-center">
           <span className="font-semibold">Mobile</span>
-          <span className="mt-1 text-[#20C4CB]">+91 8249878929</span>
+          <span className="mt-1 text-gray-300">+91 8249878929</span>
         </div>
 
         {/* LOCATION */}
         <div className="flex flex-col items-center">
           <span className="font-semibold">Location</span>
-          <span className="mt-1 text-[#20C4CB]">Bhubaneswar, India</span>
+          <span className="mt-1 text-gray-300">Bhubaneswar, India</span>
         </div>
       </div>
 
       {/* Typed text section */}
-      <div className="mt-4 text-sm italic text-gray-500 max-w-xs">
+      <div className="mt-4 text-sm italic text-gray-400 max-w-xs">
         <b>
           <span ref={el}></span>
         </b>
       </div>
 
       {/* Footer Credits */}
-      <p className="text-sm text-gray-700 mt-3">
+      <p className="text-sm text-gray-300 mt-3">
         © 2025 <b>Bhabesh Ranjan Barik</b> • Made with ❤️ using <b>React</b> • <b>TailwindCSS</b>
       </p>
 
