@@ -16,7 +16,7 @@ const About = () => {
   });
 
   return (
-    <div className="main-container bg-gray-100 py-16 px-6 md:px-16 mt-20">
+    <div className="main-container bg-gray-100 py-14 px-6 md:px-16 mt-20">
       {/* Section Title */}
       <h1 className="text-3xl md:text-4xl font-bold text-center underline pb-10">
         About Me

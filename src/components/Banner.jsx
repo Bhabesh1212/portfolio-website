@@ -29,7 +29,7 @@ const Banner = () => {
         px-5
         md:px-12
         bg-slate-800
-        mt-16
+        mt-14
       "
     >
       {/* TEXT SECTION */}
@@ -38,7 +38,6 @@ const Banner = () => {
         <h3 className="text-lg md:text-2xl font-semibold">
           Hi, I am
         </h3>
-
         <h1 className="text-3xl md:text-5xl font-bold leading-tight">
           Bhabesh Ranjan Barik
         </h1>
