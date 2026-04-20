@@ -6,10 +6,10 @@ const Services = () => {
   const [services] = useState([
     {
       id: "1",
-      imagelink: "text-5xl fa-brands fa-aws",
-      title: "Web Development",
+      imagelink: "text-5xl fa-solid fa-server",
+      title: "Backend Systems & Payments",
       description:
-        "I have a strong enthusiasm for modern web development and the rapid progress shaping the digital landscape. Each new tool or framework inspires me to craft more intuitive, efficient, and high-performing applications.",
+        "Architecting production-grade backend services for payments, issuer workflows, and high-volume transaction processing. Building secure, scalable microservices with focus on reliability and compliance.",
       actionButton: {
         title: "Check here",
         link: "/check-here",
@@ -17,10 +17,10 @@ const Services = () => {
     },
     {
       id: "2",
-      imagelink: "text-5xl fa-solid fa-server",
-      title: "Backend Development",
+      imagelink: "text-5xl fa-solid fa-shield",
+      title: "Secure Authentication & APIs",
       description:
-        "I am committed to backend engineering and modern system design. I focus on building scalable, reliable, secure, and high-performing backend services using best development practices.",
+        "Designing encrypted authentication systems, API gateways, and secure microservice communication patterns. Deep expertise in 3DS flows, JWT, encryption, and production-grade security architecture.",
       actionButton: {
         title: "Check here",
         link: "/check-here",
@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <section className={`py-14 transition-colors ${isDarkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}`} aria-labelledby="services-heading" id="services-section">
       <h2 id="services-heading" className="underline text-3xl md:text-4xl text-center font-bold">
-        My Services
+        What I Build
       </h2>
 
       <div

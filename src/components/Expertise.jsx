@@ -61,59 +61,51 @@ const Expertise = () => {
 
         {/* RIGHT SKILL SECTION */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div 
-            className="flex flex-wrap justify-center md:justify-start gap-3 w-full md:max-w-lg"
-            role="list"
-            aria-label="Skills and technologies"
-          >
+          <div className="w-full md:max-w-lg space-y-6">
             {[
-              "Core Java",
-              "J2EE",
-              "Spring Framework",
-              "Spring Boot",
-              "Spring Security",
-              "JWT",
-              "Spring Cloud",
-              "Hibernate",
-              "REST & SOAP",
-              "Microservices",
-              "Tailwind CSS",
-              "ReactJS",
-              "State Management",
-              "SQL",
-              "NoSQL",
-              "Kafka",
-              "Docker",
-              "Jenkins",
-              "Kubernetes",
-              "Load Balancer",
-              "AWS",
-            ].map((skill, index) => (
-              <div
-                key={index}
-                role="listitem"
-                className={`
-                  w-fit 
-                  px-4 
-                  py-2 
-                  rounded-full 
-                  mt-2 
-                  hover:bg-[#20C4CB] 
-                  hover:text-white 
-                  cursor-pointer 
-                  shadow
-                  text-sm md:text-base
-                  transition
-                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
-                  ${isDarkMode 
-                    ? "bg-gray-700 text-white hover:text-white" 
-                    : "bg-gray-200 text-black"
-                  }
-                `}
-                tabIndex="0"
-                aria-label={`Skill: ${skill}`}
-              >
-                {skill}
+              { category: "Backend", skills: ["Java", "Spring Boot", "Spring Security", "REST APIs", "Kafka"] },
+              { category: "Architecture", skills: ["Microservices", "API Gateway", "JWT", "Load Balancing"] },
+              { category: "Data", skills: ["PostgreSQL", "SQL", "Redis", "NoSQL"] },
+              { category: "DevOps", skills: ["Docker", "Kubernetes", "Jenkins", "AWS"] },
+              { category: "Frontend", skills: ["React", "Tailwind CSS"] },
+            ].map((group, groupIndex) => (
+              <div key={groupIndex}>
+                <h3 className={`text-sm font-semibold mb-3 uppercase tracking-wide ${isDarkMode ? "text-[#20C4CB]" : "text-blue-600"}`}>
+                  {group.category}
+                </h3>
+                <div 
+                  className="flex flex-wrap gap-2"
+                  role="list"
+                  aria-label={`${group.category} skills`}
+                >
+                  {group.skills.map((skill, skillIndex) => (
+                    <div
+                      key={skillIndex}
+                      role="listitem"
+                      className={`
+                        w-fit 
+                        px-3 
+                        py-1.5 
+                        rounded-full 
+                        hover:bg-[#20C4CB] 
+                        hover:text-white 
+                        cursor-pointer 
+                        shadow
+                        text-xs md:text-sm
+                        transition
+                        focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
+                        ${isDarkMode 
+                          ? "bg-gray-700 text-white hover:text-white" 
+                          : "bg-gray-200 text-black"
+                        }
+                      `}
+                      tabIndex="0"
+                      aria-label={`Skill: ${skill}`}
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

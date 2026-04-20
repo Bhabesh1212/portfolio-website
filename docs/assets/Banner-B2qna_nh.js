@@ -1,4 +1,4 @@
-import{a as e,i as t,o as n,r}from"./index-U_qmTgeb.js";import{t as i}from"./typed.module-eipIcyPJ.js";var a=n(e(),1),o=t(),s=()=>{let{isDarkMode:e}=(0,a.useContext)(r),t=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=new i(t.current,{strings:[`Software Engineer 2 | Java Backend Engineer`,`Building secure payment systems and scalable microservices`,`Java, Spring Boot, Kafka, API Security, React`],startDelay:100,typeSpeed:50,backSpeed:10,backDelay:100,loop:!0});return()=>e.destroy()},[]),(0,o.jsx)(`div`,{id:`main-content`,className:`
+import{a as e,i as t,o as n,r}from"./index-BVXDVy8n.js";import{t as i}from"./typed.module-eipIcyPJ.js";var a=n(e(),1),o=t(),s=()=>{let{isDarkMode:e}=(0,a.useContext)(r),t=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=new i(t.current,{strings:[`Software Engineer 2 | Java Backend Engineer`,`Building secure payment systems and scalable microservices`,`Java, Spring Boot, Kafka, API Security, React`],startDelay:100,typeSpeed:50,backSpeed:10,backDelay:100,loop:!0});return()=>e.destroy()},[]),(0,o.jsx)(`div`,{id:`main-content`,className:`
         w-full
         min-h-[45vh]
         flex

@@ -4,48 +4,48 @@ import { DarkModeContext } from "../context/DarkModeContext";
 const domainExpertise = [
   {
     id: 1,
-    title: "Payments and Transaction Processing",
+    title: "Payments, Issuer Systems, Transaction Lifecycle",
     description:
-      "Built issuer-side transaction systems, authorization flows, settlement engines, and compliance-ready payment integrations for high-volume fintech workloads.",
+      "Built issuer-side transaction systems, authorization flows, settlement engines, and compliance-ready payment integrations for high-volume fintech workloads. Experience spans prepaid card processing, reconciliation, and multi-currency payment workflows.",
   },
   {
     id: 2,
-    title: "Secure Authentication Systems",
+    title: "3DS Authentication, Encryption, Secure API Flows",
     description:
-      "Delivered 3DS, JWT-based auth, encrypted payload handling, and resilient backend flows where security and availability are both critical.",
+      "Delivered 3DS authentication journeys, JWT-based authorization, encrypted payload handling, and resilient backend flows where security and availability are both critical. Deep expertise in risk-aware flow control and secure session management.",
   },
   {
     id: 3,
-    title: "Microservices and Platform Engineering",
+    title: "Microservices, Gateway Integration, Event-Driven Design",
     description:
-      "Built distributed backend services with API gateway patterns, scalable service communication, observability, and production-grade reliability.",
+      "Built distributed backend services with API gateway patterns, scalable service communication, observability, and production-grade reliability. Focused on event-driven architecture and maintaining system resilience at scale.",
   },
 ];
 
 const productionWins = [
   {
     id: 1,
-    label: "RuPay certification support",
+    label: "Payments & Compliance Architecture",
     detail:
-      "Contributed to payment switch capabilities aligned with certification and compliance-driven backend requirements.",
+      "Led issuer transaction workflow design meeting RuPay certification and compliance standards. Built resilient settlement and reconciliation engines handling high transaction volumes.",
   },
   {
     id: 2,
-    label: "3DS flow implementation",
+    label: "Secure Authentication & Encryption",
     detail:
-      "Worked on issuer authentication journeys involving encrypted request-response handling, risk-aware flow control, and session lifecycle management.",
+      "Implemented end-to-end 3DS authentication flows with encrypted request-response cycles, risk-aware routing, and PCI-compliant payload handling across distributed services.",
   },
   {
     id: 3,
-    label: "Production-ready microservices",
+    label: "Production Support & Deployment Readiness",
     detail:
-      "Delivered backend services focused on maintainability, secure API exposure, and readiness for high-availability deployment environments.",
+      "Built observability-first microservices with structured logging, metrics, and alerting. Established deployment automation and incident response patterns supporting zero-downtime releases.",
   },
   {
     id: 4,
-    label: "Cross-functional delivery",
+    label: "Reliability Mindset & Cross-Functional Delivery",
     detail:
-      "Collaborated with product, QA, and senior engineers to ship backend changes cleanly and support integration across teams.",
+      "Collaborated across product, QA, and platform teams to ship backend changes cleanly, maintain SLOs, and support seamless integration in complex fintech environments.",
   },
 ];
 
