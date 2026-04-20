@@ -8,7 +8,11 @@ const Banner = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Backend Developer", "Web Developer"],
+      strings: [
+        "Software Engineer 2 | Java Backend Engineer",
+        "Building secure payment systems and scalable microservices",
+        "Java, Spring Boot, Kafka, API Security, React",
+      ],
       startDelay: 100,
       typeSpeed: 50,
       backSpeed: 10,
@@ -57,9 +61,7 @@ const Banner = () => {
         </h2>
 
         <p className="text-sm md:text-base leading-relaxed mt-3 px-2 md:px-0">
-          Welcome to my digital space! I am a backend engineer specializing in 
-          building scalable systems, microservices, APIs, and solving real-world 
-          engineering challenges.
+          I build production backend systems for payments, issuer workflows, and secure API-driven platforms while also delivering product UI that supports strong user experiences.
         </p>
 
         {/* SOCIAL ICONS */}

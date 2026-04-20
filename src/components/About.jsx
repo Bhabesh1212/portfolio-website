@@ -7,15 +7,13 @@ const About = () => {
   const { isDarkMode } = useContext(DarkModeContext);
   const [data] = useState({
     image: userImage,
-    title: "Software Engineer",
+    title: "Software Engineer 2",
     desc1:
-      "I am a Software Engineer with 3+ years of experience in Java, Spring Boot, Microservices, and API Gateway-based architectures. My expertise includes building modular services, implementing secure authentication flows (JWT, OAuth), integrating REST/Kafka-based communication, and optimizing backend performance.",
+      "I build production backend systems for payments, issuer workflows, and high-volume enterprise services using Java, Spring Boot, Kafka, and secure API gateways.",
     desc2:
-      "I have hands-on exposure to Docker, CI/CD pipelines, Cloud services, and production-grade design patterns. With a strong interest in system design and real-world problem-solving, I aim to build reliable, scalable, and maintainable backend applications while continuously learning and adapting to modern engineering practices.",
-    actionButton: {
-      title: "Read More...",
-      link: "/readMore",
-    },
+      "I deliver reliable, resilient systems that support secure authentication, authorization, encryption, and real-time transaction processing while enabling teams to move faster with maintainable microservices.",
+    desc3:
+      "My strength is turning complex business requirements into hardened backend solutions, especially in payments, card issuing, API security, and integration-heavy domains.",
   });
 
   return (
@@ -52,6 +50,7 @@ const About = () => {
 
             <p className={`text-base md:text-lg ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>{data.desc1}</p>
             <p className={`text-base md:text-lg ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>{data.desc2}</p>
+            <p className={`text-base md:text-lg ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>{data.desc3}</p>
 
             {/* <a
               href={data.actionButton.link}

@@ -9,7 +9,13 @@ const KeyProjectsAndProduct = () => {
       title: "Prepaid Card Issuer Transaction Switch",
       product: "Prepaid Card Issuer POS Switch",
       description:
-        "Did RuPay certification and implemented prepaid card authorization, reconciliation, settlement, and issuer integrations with secure rule-based processing.",
+        "Problem: A payment platform required certified issuer processing, reconciliation, and settlement for prepaid card transactions.",
+      details: [
+        "Role: Backend engineer responsible for authorization and settlement workflows.",
+        "Stack: Java, Spring Boot, Kafka, PostgreSQL, Docker, Kubernetes, 3DES/AES encryption.",
+        "Challenge: Built secure rule-based processing and data flows meeting RuPay compliance.",
+        "Impact: Delivered robust payment processing with better transaction reliability and auditability.",
+      ],
       techStack: [
         "Java",
         "Spring Boot",
@@ -26,7 +32,13 @@ const KeyProjectsAndProduct = () => {
       title: "API Gateway Based Microservices Platform",
       product: "Backend Modernization Platform",
       description:
-        "Developed microservices architecture with centralized authentication, routing, rate-limiting, and scalable backend design.",
+        "Problem: Legacy backend services needed centralized authentication, routing, and secure API exposure.",
+      details: [
+        "Role: Backend engineer driving API gateway integration and service orchestration.",
+        "Stack: Spring Cloud, Spring Security, JWT, API Gateway, ELK, Docker, CI/CD.",
+        "Challenge: Implemented consistent auth, traffic protection, and observability across microservices.",
+        "Impact: Improved maintainability and reliability for production APIs.",
+      ],
       techStack: [
         "Spring Cloud",
         "Spring Security",
@@ -42,7 +54,13 @@ const KeyProjectsAndProduct = () => {
       title: "3DS ACS Server Processing",
       product: "Secure Issuer Authentication Service",
       description:
-        "Implemented full 3DS 2.x flow including CReq/CRes processing, JWE encryption, risk evaluation, and session expiry management.",
+        "Problem: The authentication layer needed reliable 3DS 2.x message handling and fraud-resistant authorization flows.",
+      details: [
+        "Role: Backend engineer implementing secure ACS server logic.",
+        "Stack: Java, Spring Boot, JWE/JWS, 3DS 2.x Protocol, Redis, encryption.",
+        "Challenge: Built CReq/CRes processing, encrypted payload handling, and session expiry control.",
+        "Impact: Delivered a production-ready issuer authentication service with stronger transaction security.",
+      ],
       techStack: [
         "Java",
         "Spring Boot",
@@ -99,6 +117,14 @@ const KeyProjectsAndProduct = () => {
             <p className={`mt-4 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
               {proj.description}
             </p>
+
+            <ul className="mt-4 list-disc list-inside space-y-2">
+              {proj.details?.map((item, index) => (
+                <li key={index} className={`leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             {/* Technologies Used */}
             <div className="mt-4">

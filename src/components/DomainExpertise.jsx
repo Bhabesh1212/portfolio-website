@@ -6,19 +6,19 @@ const domainExpertise = [
     id: 1,
     title: "Payments and Transaction Processing",
     description:
-      "Hands-on experience building issuer-side transaction systems, authorization flows, settlement support, and certification-driven payment integrations.",
+      "Built issuer-side transaction systems, authorization flows, settlement engines, and compliance-ready payment integrations for high-volume fintech workloads.",
   },
   {
     id: 2,
     title: "Secure Authentication Systems",
     description:
-      "Worked on 3DS, JWT-based authorization, encrypted payload handling, and backend flows where reliability and security are equally critical.",
+      "Delivered 3DS, JWT-based auth, encrypted payload handling, and resilient backend flows where security and availability are both critical.",
   },
   {
     id: 3,
     title: "Microservices and Platform Engineering",
     description:
-      "Built and supported distributed services with API gateway patterns, service-to-service communication, observability concerns, and scalable backend design.",
+      "Built distributed backend services with API gateway patterns, scalable service communication, observability, and production-grade reliability.",
   },
 ];
 

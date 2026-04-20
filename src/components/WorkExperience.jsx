@@ -9,16 +9,22 @@ const WorkExperience = () => {
       role: "Software Engineer-2",
       company: "IserveU Technologies Pvt. Ltd.",
       duration: "2023 Feb — Present",
-      description:
-        "Working as a backend engineer specializing in Spring Boot, Microservices, API Gateway integrations, cloud deployments, and designing scalable backend architectures.",
+      description: [
+        "Designed and built issuer transaction workflows for prepaid card systems, including authorization, reconciliation, and settlement processing.",
+        "Implemented secure API gateway routing, JWT-based authentication, and transaction-level logging for payments and issuer integrations.",
+        "Collaborated with QA, product, and backend teams to improve maintainability, resilience, and deployment readiness for critical payment services.",
+      ],
     },
     {
       id: 2,
       role: "Java Developer",
       company: "Inspirisys Solutions Ltd",
       duration: "2022 Nov — 2023 Jan",
-      description:
-        "Developed enterprise-grade REST APIs, optimized SQL queries, supported backend modules, and collaborated with senior developers to enhance system reliability and performance.",
+      description: [
+        "Delivered enterprise REST APIs and backend services for financial domain workflows, focusing on reliability and secure data handling.",
+        "Optimized performance for API endpoints and database interactions to support higher transaction volume.",
+        "Worked closely with senior engineers to deploy maintainable Java services and integrate monitoring for production readiness.",
+      ],
     },
   ];
 
@@ -53,9 +59,13 @@ const WorkExperience = () => {
 
             <p className={`text-sm mt-1 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>{exp.duration}</p>
 
-            <p className={`mt-4 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-              {exp.description}
-            </p>
+            <ul className="mt-4 list-disc list-inside space-y-3">
+              {exp.description.map((detail, index) => (
+                <li key={index} className={`leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
+                  {detail}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
