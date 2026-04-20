@@ -19,7 +19,7 @@ const WorkExperience = () => {
   ];
 
   return (
-    <section className="py-3 my-12 px-6 bg-slate-900 text-white" aria-labelledby="work-heading">
+    <section className="py-3 my-12 px-6 bg-slate-900 text-white" aria-labelledby="work-heading" id="experience-section">
       {/* Heading */}
       <h2 id="work-heading" className="underline text-3xl md:text-4xl font-bold text-center">
         Work Experience

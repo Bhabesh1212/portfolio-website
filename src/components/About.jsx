@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LazyImage from "./LazyImage";
 import userImage from "../assets/Banner_image.svg";
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
 
   return (
     <section 
+      id="about-section"
       className="main-container bg-gray-100 py-14 px-6 md:px-16 mt-20"
       aria-labelledby="about-heading"
     >
@@ -32,10 +34,10 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center gap-10">
         {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            className="w-3/4 md:w-full max-w-sm md:max-w-md"
+          <LazyImage
             src={data.image}
             alt="Profile picture of Bhabesh Ranjan Barik - Software Engineer"
+            className="w-3/4 md:w-full max-w-sm md:max-w-md"
           />
         </div>
 

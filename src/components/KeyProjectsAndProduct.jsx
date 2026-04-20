@@ -52,7 +52,7 @@ const KeyProjectsAndProduct = () => {
   ];
 
   return (
-    <section className="py-4 my-12 px-6 bg-slate-900 text-white" aria-labelledby="projects-heading">
+    <section className="py-4 my-12 px-6 bg-slate-900 text-white" aria-labelledby="projects-heading" id="projects-section">
       {/* MAIN HEADING */}
       <h2 id="projects-heading" className="underline text-3xl md:text-4xl font-bold text-center">
         Key Projects & Product Highlights

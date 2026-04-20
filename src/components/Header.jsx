@@ -7,32 +7,62 @@ const Header = () => {
   const brandName = "Bhabesh Ranjan Barik";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openEmailPopup = () => {
-    const confirmed = window.confirm("Do you want to contact me via email?");
-    if (confirmed) {
-      window.location.href = "mailto:bhabesh.barik.dev@gmail.com";
+  // Navigation sections for smooth scrolling
+  const sections = [
+    { title: "Home", id: "home", offset: 0 },
+    { title: "About", id: "about-section", offset: -80 },
+    { title: "Experience", id: "experience-section", offset: -80 },
+    { title: "Projects", id: "projects-section", offset: -80 },
+    { title: "Services", id: "services-section", offset: -80 },
+    { title: "Skills", id: "skills-section", offset: -80 },
+    { title: "Contact", id: "contact-section", offset: -80 },
+  ];
+
+  const handleSmoothScroll = (id, offset = 0) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const top = element.offsetTop + offset;
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+      setIsMenuOpen(false);
     }
   };
-
-  const menuLinks = [
-    {
-      title: "Home",
-      link: homeLink,
-      id: 1,
-    },
-    {
-      title: "Contacts",
-      link: "#",
-      id: 4,
-      action: openEmailPopup,
-    },
-  ];
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape" && isMenuOpen) {
       setIsMenuOpen(false);
     }
   };
+
+  const menuLinks = [
+    {
+      title: "Home",
+      action: () => handleSmoothScroll("home", 0),
+      id: 1,
+    },
+    {
+      title: "About",
+      action: () => handleSmoothScroll("about-section", -80),
+      id: 2,
+    },
+    {
+      title: "Experience",
+      action: () => handleSmoothScroll("experience-section", -80),
+      id: 3,
+    },
+    {
+      title: "Projects",
+      action: () => handleSmoothScroll("projects-section", -80),
+      id: 4,
+    },
+    {
+      title: "Contact",
+      action: () => handleSmoothScroll("contact-section", -80),
+      id: 5,
+    },
+  ];
 
   return (
     <header 
@@ -50,35 +80,29 @@ const Header = () => {
 
       {/* Brand */}
       <h1 className="text-lg md:text-xl font-bold">
-        <a 
-          href={homeLink}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="hover:text-orange-600 transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-2 py-1 cursor-pointer bg-transparent border-none text-left"
           aria-label={brandName}
-          className="hover:text-orange-600 transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-2 py-1"
         >
           {brandName}
-        </a>
+        </button>
       </h1>
 
       {/* Desktop Menu */}
       <nav 
-        className="hidden md:flex ml-auto space-x-8 items-center"
+        className="hidden md:flex ml-auto space-x-2 items-center"
         aria-label="Main navigation"
       >
         {menuLinks.map((item) => (
-          <a
+          <button
             key={item.id}
-            href={item.link}
-            onClick={(e) => {
-              if (item.action) {
-                e.preventDefault();
-                item.action();
-              }
-            }}
-            className="hover:text-orange-600 cursor-pointer text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-2 py-1 transition"
+            onClick={item.action}
+            className="hover:text-orange-600 cursor-pointer text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-3 py-2 transition bg-transparent border-none"
             aria-label={item.title}
           >
             {item.title}
-          </a>
+          </button>
         ))}
 
         <a
@@ -94,7 +118,7 @@ const Header = () => {
 
       {/* Mobile Hamburger Menu */}
       <button
-        className="md:hidden ml-auto text-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded p-1 transition"
+        className="md:hidden ml-auto text-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded p-1 transition bg-transparent border-none"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         onKeyDown={handleKeyDown}
         aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -113,21 +137,14 @@ const Header = () => {
           aria-label="Mobile navigation"
         >
           {menuLinks.map((item) => (
-            <a
+            <button
               key={item.id}
-              href={item.link}
-              onClick={(e) => {
-                if (item.action) {
-                  e.preventDefault();
-                  item.action();
-                }
-                setIsMenuOpen(false);
-              }}
-              className="hover:text-orange-600 cursor-pointer text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-2 py-1 transition"
+              onClick={item.action}
+              className="hover:text-orange-600 cursor-pointer text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-2 py-1 transition text-left bg-transparent border-none"
               aria-label={item.title}
             >
               {item.title}
-            </a>
+            </button>
           ))}
 
           <a

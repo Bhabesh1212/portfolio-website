@@ -27,7 +27,7 @@ const Services = () => {
   ]);
 
   return (
-    <section className="py-14 bg-slate-900 text-white" aria-labelledby="services-heading">
+    <section className="py-14 bg-slate-900 text-white" aria-labelledby="services-heading" id="services-section">
       <h2 id="services-heading" className="underline text-3xl md:text-4xl text-center font-bold">
         My Services
       </h2>

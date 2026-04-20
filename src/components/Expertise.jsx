@@ -1,6 +1,6 @@
 const Expertise = () => {
   return (
-    <section className="my-12" aria-labelledby="skills-heading">
+    <section className="my-12" aria-labelledby="skills-heading" id="skills-section">
 
       {/* BOX SECTION */}
       <div

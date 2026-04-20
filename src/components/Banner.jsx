@@ -19,6 +19,7 @@ const Banner = () => {
 
   return (
     <div
+      id="main-content"
       className="
         w-full
         min-h-[45vh]
@@ -32,7 +33,6 @@ const Banner = () => {
         mt-14
       "
       role="main"
-      id="main-content"
       aria-label="Banner section with introduction"
     >
       {/* TEXT SECTION */}
