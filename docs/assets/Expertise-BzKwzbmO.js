@@ -1,4 +1,4 @@
-import{a as e,i as t,o as n,r}from"./index-BVXDVy8n.js";var i=n(e(),1),a=t(),o=()=>{let{isDarkMode:e}=(0,i.useContext)(r);return(0,a.jsx)(`section`,{className:`my-12`,"aria-labelledby":`skills-heading`,id:`skills-section`,children:(0,a.jsxs)(`div`,{className:`
+import{a as e,i as t,o as n,r}from"./index-DYBJ5b5M.js";var i=n(e(),1),a=t(),o=()=>{let{isDarkMode:e}=(0,i.useContext)(r);return(0,a.jsx)(`section`,{className:`my-12`,"aria-labelledby":`skills-heading`,id:`skills-section`,children:(0,a.jsxs)(`div`,{className:`
           mt-10 
           w-full 
           py-14 

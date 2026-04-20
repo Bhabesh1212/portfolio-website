@@ -113,10 +113,35 @@ const ContactForm = () => {
           Get In Touch
         </h2>
 
-        <p className={`text-center mb-10 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-          Have a question or want to work together? Send me a message and I'll
-          get back to you as soon as possible.
+        <p className={`text-center mb-8 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+          Open to backend engineering and full-stack opportunities. Reach out with questions, collaboration ideas, or backend engineering roles.
         </p>
+
+        {/* Recruiter-Friendly Info Box */}
+        <div className={`mb-10 p-6 rounded-xl border transition-colors ${
+          isDarkMode 
+            ? "bg-slate-800 border-slate-700 text-gray-300" 
+            : "bg-blue-50 border-blue-200 text-gray-800"
+        }`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <p className="font-semibold text-[#20C4CB] mb-1">Preferred Roles</p>
+              <p>Backend Engineer, Software Engineer, Payments Engineer, Platform Engineer</p>
+            </div>
+            <div>
+              <p className="font-semibold text-[#20C4CB] mb-1">Availability</p>
+              <p>Available for discussions on ongoing or new opportunities</p>
+            </div>
+            <div>
+              <p className="font-semibold text-[#20C4CB] mb-1">Location</p>
+              <p>Based in Bhubaneswar, India • Open to remote or hybrid roles</p>
+            </div>
+            <div>
+              <p className="font-semibold text-[#20C4CB] mb-1">Focus Areas</p>
+              <p>Payments, microservices, secure APIs, fintech systems</p>
+            </div>
+          </div>
+        </div>
 
         {/* Success Message */}
         {submitted && (

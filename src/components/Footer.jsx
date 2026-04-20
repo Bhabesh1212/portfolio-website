@@ -9,7 +9,7 @@ const Footer = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Crafted with passion for backend development. Let’s turn ideas into something extraordinary!",
+        "Building backend systems that scale. Available for opportunities.",
       ],
       startDelay: 100,
       typeSpeed: 30,
@@ -31,12 +31,11 @@ const Footer = () => {
 
       {/* ⭐ NEW HEADING */}
       <h2 className={`text-2xl md:text-2xl font-bold mt-8 mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-        Let's Connect & Collaborate
+        Connect
       </h2>
 
       <p className={`text-sm max-w-xl ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-        I am always open to discussing new opportunities, product challenges, 
-        and innovative ideas in the digital space.
+        Interested in backend engineering opportunities or have a project in mind? I'm open to discussions and collaboration.
       </p>
 
       {/* ⭐ Contact Info Box (Dark Theme) */}
@@ -97,8 +96,8 @@ const Footer = () => {
       </div>
 
       {/* Footer Credits */}
-      <p className={`text-sm mt-3 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-        © 2025 <b>Bhabesh Ranjan Barik</b> • Made with ❤️ using <b>React</b> • <b>TailwindCSS</b>
+      <p className={`text-xs mt-3 ${isDarkMode ? "text-gray-500" : "text-gray-600"}`}>
+        © 2025 Bhabesh Ranjan Barik | Built with React and Tailwind CSS
       </p>
 
     </footer>
