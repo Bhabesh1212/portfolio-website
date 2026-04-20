@@ -27,24 +27,24 @@ const Services = () => {
   ]);
 
   return (
-    <>
-      <div className="py-14 bg-slate-900 text-white"> {/* ⭐ Single color background */}
-        <h1 className="underline text-3xl md:text-4xl text-center font-bold">
-          My Services
-        </h1>
+    <section className="py-14 bg-slate-900 text-white" aria-labelledby="services-heading">
+      <h2 id="services-heading" className="underline text-3xl md:text-4xl text-center font-bold">
+        My Services
+      </h2>
 
-        <div
-          className="
-            mt-10 
-            grid 
-            grid-cols-1 
-            md:grid-cols-2 
-            gap-8 
-            max-w-5xl 
-            mx-auto 
-            px-6
-          "
-        >
+      <div
+        className="
+          mt-10 
+          grid 
+          grid-cols-1 
+          md:grid-cols-2 
+          gap-8 
+          max-w-5xl 
+          mx-auto 
+          px-6
+        "
+        role="list"
+      >
           {services.map((service) => (
             <div
               key={service.id}
@@ -56,13 +56,16 @@ const Services = () => {
                 p-6 
                 text-center 
                 transition
+                focus-within:ring-2 focus-within:ring-blue-500
               "
+              role="listitem"
+              aria-label={service.title}
             >
-              <i className={`${service.imagelink} mb-4`}></i>
+              <i className={`${service.imagelink} mb-4`} aria-hidden="true"></i>
 
-              <h1 className="text-2xl md:text-3xl font-semibold mb-2">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-2">
                 {service.title}
-              </h1>
+              </h3>
 
               <p className="text-sm md:text-base leading-relaxed">
                 {service.description}
@@ -88,9 +91,8 @@ const Services = () => {
             </div>
           ))}
         </div>
-      </div>
-    </>
-  );
-};
+      </section>
+    );
+  };
 
 export default Services;

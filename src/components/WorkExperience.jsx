@@ -19,14 +19,14 @@ const WorkExperience = () => {
   ];
 
   return (
-    <div className="py-3 my-12 px-6 bg-slate-900 text-white ">
-      {/* ⭐ Heading (Kept as Requested) */}
-      <h1 className="underline text-3xl md:text-4xl font-bold text-center">
+    <section className="py-3 my-12 px-6 bg-slate-900 text-white" aria-labelledby="work-heading">
+      {/* Heading */}
+      <h2 id="work-heading" className="underline text-3xl md:text-4xl font-bold text-center">
         Work Experience
-      </h1>
+      </h2>
 
       {/* Experience Cards */}
-      <div className="mt-10 space-y-8 max-w-4xl mx-auto">
+      <div className="mt-10 space-y-8 max-w-4xl mx-auto" role="list">
         {experiences.map((exp) => (
           <div
             key={exp.id}
@@ -70,13 +70,15 @@ const WorkExperience = () => {
             shadow-lg 
             hover:bg-[#1FB5BC] 
             hover:text-white 
+            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
             transition
           "
+          aria-label="Connect on LinkedIn - Opens in new tab"
         >
           Connect on LinkedIn
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

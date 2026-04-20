@@ -1,6 +1,6 @@
 const Expertise = () => {
   return (
-    <div className="my-12">
+    <section className="my-12" aria-labelledby="skills-heading">
 
       {/* BOX SECTION */}
       <div
@@ -24,9 +24,9 @@ const Expertise = () => {
         {/* LEFT TEXT SECTION */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <div className="w-full md:max-w-md text-center md:text-left space-y-5">
-            <h1 className="underline text-3xl md:text-4xl font-bold">
+            <h2 id="skills-heading" className="underline text-3xl md:text-4xl font-bold">
               Skills & Tools
-            </h1>
+            </h2>
 
             <p className="text-base md:text-lg leading-relaxed">
               My focus is on leveraging technology to build efficient and
@@ -45,8 +45,10 @@ const Expertise = () => {
                 shadow-lg 
                 hover:bg-[#0ddde4]
                 hover:text-white 
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
                 transition
               "
+              aria-label="Connect on LinkedIn - Opens in new tab"
             >
               Connect on LinkedIn
             </a>
@@ -55,7 +57,11 @@ const Expertise = () => {
 
         {/* RIGHT SKILL SECTION */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div className="flex flex-wrap justify-center md:justify-start gap-3 w-full md:max-w-lg">
+          <div 
+            className="flex flex-wrap justify-center md:justify-start gap-3 w-full md:max-w-lg"
+            role="list"
+            aria-label="Skills and technologies"
+          >
             {[
               "Core Java",
               "J2EE",
@@ -79,8 +85,9 @@ const Expertise = () => {
               "Load Balancer",
               "AWS",
             ].map((skill, index) => (
-              <p
+              <div
                 key={index}
+                role="listitem"
                 className="
                   bg-gray-200 
                   w-fit 
@@ -95,15 +102,18 @@ const Expertise = () => {
                   text-black
                   text-sm md:text-base
                   transition
+                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
                 "
+                tabIndex="0"
+                aria-label={`Skill: ${skill}`}
               >
                 {skill}
-              </p>
+              </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

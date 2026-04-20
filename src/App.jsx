@@ -1,6 +1,5 @@
-import { useState } from 'react'
-
 import './App.css'
+import ErrorBoundary from './components/ErrorBoundary'
 import Header from './components/Header'
 import Banner from './components/Banner'
 import About from './components/About'
@@ -10,24 +9,18 @@ import Footer from './components/Footer'
 import WorkExperience from './components/WorkExperience'
 import KeyProjectsAndProduct from './components/KeyProjectsAndProduct'
 
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    {/* <h1 className="text-3xl flex justify-center font-bold underline">
-      Hello world!
-    </h1> */}
+    <ErrorBoundary>
       <Header/>
       <Banner/>
+      <About/>
       <WorkExperience/>
       <KeyProjectsAndProduct/>
-      <About/>
       <Services/>
       <Expertise/>
       <Footer/>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -21,16 +21,19 @@ const Banner = () => {
     <div
       className="
         w-full
-        min-h-[45vh]        /* ⭐ Reduced height */
+        min-h-[45vh]
         flex
         justify-center
         items-center
-        py-10               /* ⭐ Smaller padding */
+        py-10
         px-5
         md:px-12
         bg-slate-800
         mt-14
       "
+      role="main"
+      id="main-content"
+      aria-label="Banner section with introduction"
     >
       {/* TEXT SECTION */}
       <div className="text-white max-w-2xl text-center md:text-left space-y-3">
@@ -43,7 +46,11 @@ const Banner = () => {
         </h1>
 
         <h2 className="text-xl md:text-3xl">
-          I am a <span className="font-bold text-[#20C4CB]" ref={el}></span>
+          I am a <span 
+            className="font-bold text-[#20C4CB]" 
+            ref={el}
+            aria-label="Backend Developer or Web Developer"
+          ></span>
         </h2>
 
         <p className="text-sm md:text-base leading-relaxed mt-3 px-2 md:px-0">
@@ -53,17 +60,39 @@ const Banner = () => {
         </p>
 
         {/* SOCIAL ICONS */}
-        <div className="flex justify-center md:justify-start space-x-5 pt-3">
-          <a href="https://www.instagram.com/worldofbhabesh/">
-            <i className="fa-brands fa-instagram text-2xl hover:text-[#20C4CB] transition"></i>
+        <div 
+          className="flex justify-center md:justify-start space-x-5 pt-3"
+          role="group"
+          aria-label="Social media links"
+        >
+          <a 
+            href="https://www.instagram.com/worldofbhabesh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit my Instagram profile - Opens in new tab"
+            className="hover:text-[#20C4CB] transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded p-1"
+          >
+            <i className="fa-brands fa-instagram text-2xl"></i>
           </a>
 
-          <a href="https://www.linkedin.com/in/bhabesh-%E2%80%8Branjan-barik-42699b127">
-            <i className="fa-brands fa-linkedin text-2xl hover:text-[#20C4CB] transition"></i>
+          <a 
+            href="https://www.linkedin.com/in/bhabesh-%E2%80%8Branjan-barik-42699b127"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Connect with me on LinkedIn - Opens in new tab"
+            className="hover:text-[#20C4CB] transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded p-1"
+          >
+            <i className="fa-brands fa-linkedin text-2xl"></i>
           </a>
 
-          <a href="https://github.com/Bhabesh1212">
-            <i className="fa-brands fa-github text-2xl hover:text-[#20C4CB] transition"></i>
+          <a 
+            href="https://github.com/Bhabesh1212"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View my GitHub profile - Opens in new tab"
+            className="hover:text-[#20C4CB] transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded p-1"
+          >
+            <i className="fa-brands fa-github text-2xl"></i>
           </a>
         </div>
 

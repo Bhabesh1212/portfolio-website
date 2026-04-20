@@ -20,12 +20,15 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-6 bg-slate-900 border-t flex flex-col items-center text-center px-5">
+    <footer 
+      className="py-6 bg-slate-900 border-t flex flex-col items-center text-center px-5"
+      role="contentinfo"
+    >
 
       {/* ⭐ NEW HEADING */}
-      <h1 className="text-2xl md:text-2xl font-bold text-white mt-8 mb-2">
-        Let’s Connect & Collaborate
-      </h1>
+      <h2 className="text-2xl md:text-2xl font-bold text-white mt-8 mb-2">
+        Let's Connect & Collaborate
+      </h2>
 
       <p className="text-sm text-gray-300 max-w-xl">
         I am always open to discussing new opportunities, product challenges, 
@@ -50,13 +53,16 @@ const Footer = () => {
           text-sm
           text-white
         "
+        role="region"
+        aria-label="Contact information"
       >
         {/* EMAIL */}
         <div className="flex flex-col items-center">
           <span className="font-semibold">Email</span>
           <a
             href="mailto:bhabesh.barik.dev@gmail.com"
-            className="text-gray-300 hover:underline break-all mt-1"
+            className="text-gray-300 hover:underline break-all mt-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-1"
+            aria-label="Send me an email at bhabesh.barik.dev@gmail.com"
           >
             bhabesh.barik.dev@gmail.com
           </a>
@@ -65,18 +71,18 @@ const Footer = () => {
         {/* MOBILE */}
         <div className="flex flex-col items-center">
           <span className="font-semibold">Mobile</span>
-          <span className="mt-1 text-gray-300">+91 8249878929</span>
+          <span className="mt-1 text-gray-300" aria-label="Phone number: +91 8249878929">+91 8249878929</span>
         </div>
 
         {/* LOCATION */}
         <div className="flex flex-col items-center">
           <span className="font-semibold">Location</span>
-          <span className="mt-1 text-gray-300">Bhubaneswar, India</span>
+          <span className="mt-1 text-gray-300" aria-label="Located in Bhubaneswar, India">Bhubaneswar, India</span>
         </div>
       </div>
 
       {/* Typed text section */}
-      <div className="mt-4 text-sm italic text-gray-400 max-w-xs">
+      <div className="mt-4 text-sm italic text-gray-400 max-w-xs" role="status" aria-live="polite">
         <b>
           <span ref={el}></span>
         </b>

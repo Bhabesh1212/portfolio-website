@@ -52,11 +52,11 @@ const KeyProjectsAndProduct = () => {
   ];
 
   return (
-    <div className="py-4 my-12 px-6 bg-slate-900 text-white">
+    <section className="py-4 my-12 px-6 bg-slate-900 text-white" aria-labelledby="projects-heading">
       {/* MAIN HEADING */}
-      <h1 className="underline text-3xl md:text-4xl font-bold text-center">
+      <h2 id="projects-heading" className="underline text-3xl md:text-4xl font-bold text-center">
         Key Projects & Product Highlights
-      </h1>
+      </h2>
 
       {/* SMALL HEADER TEXT BELOW */}
       <p className="text-center text-gray-300 mt-2 text-sm md:text-base">
@@ -64,7 +64,7 @@ const KeyProjectsAndProduct = () => {
       </p>
 
       {/* PROJECT CARDS */}
-      <div className="mt-10 space-y-7 max-w-4xl mx-auto">
+      <div className="mt-10 space-y-7 max-w-4xl mx-auto" role="list">
 
         {projects.map((proj) => (
           <div
@@ -79,10 +79,13 @@ const KeyProjectsAndProduct = () => {
               border-slate-800
               hover:shadow-2xl
               transition
+              focus-within:ring-2 focus-within:ring-blue-500
             "
+            role="listitem"
+            aria-label={`${proj.title} project`}
           >
             {/* Project Title */}
-            <h2 className="text-2xl font-semibold">{proj.title}</h2>
+            <h3 className="text-2xl font-semibold">{proj.title}</h3>
 
             {/* Product Name */}
             <p className="text-[#20C4CB] font-medium mt-1">{proj.product}</p>
@@ -94,11 +97,11 @@ const KeyProjectsAndProduct = () => {
 
             {/* Technologies Used */}
             <div className="mt-4">
-              <h3 className="text-lg font-semibold text-[#20C4CB]">
+              <h4 className="text-lg font-semibold text-[#20C4CB]">
                 Technologies Used:
-              </h3>
+              </h4>
 
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-wrap gap-2 mt-2" role="list" aria-label="Technologies used in this project">
                 {proj.techStack.map((tech, index) => (
                   <span
                     key={index}
@@ -113,7 +116,11 @@ const KeyProjectsAndProduct = () => {
                       hover:text-white 
                       cursor-pointer 
                       transition
+                      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
                     "
+                    role="listitem"
+                    tabIndex="0"
+                    aria-label={tech}
                   >
                     {tech}
                   </span>
@@ -124,7 +131,7 @@ const KeyProjectsAndProduct = () => {
         ))}
 
       </div>
-    </div>
+    </section>
   );
 };
 
