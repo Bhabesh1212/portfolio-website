@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
+
 const WorkExperience = () => {
+  const { isDarkMode } = useContext(DarkModeContext);
   const experiences = [
     {
       id: 1,
@@ -19,7 +23,7 @@ const WorkExperience = () => {
   ];
 
   return (
-    <section className="py-3 my-12 px-6 bg-slate-900 text-white" aria-labelledby="work-heading" id="experience-section">
+    <section className={`py-3 my-12 px-6 transition-colors ${isDarkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}`} aria-labelledby="work-heading" id="experience-section">
       {/* Heading */}
       <h2 id="work-heading" className="underline text-3xl md:text-4xl font-bold text-center">
         Work Experience
@@ -30,26 +34,26 @@ const WorkExperience = () => {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="
-              bg-slate-800
-              hover:bg-slate-700  
-              text-white 
+            className={`
               p-6 
               rounded-xl 
               shadow-lg 
               border 
-              border-slate-800
               hover:shadow-2xl
               transition
-            "
+              ${isDarkMode 
+                ? "bg-slate-800 text-white border-slate-700 hover:bg-slate-700" 
+                : "bg-white text-gray-900 border-gray-200 hover:bg-gray-50"
+              }
+            `}
           >
             <h2 className="text-2xl font-semibold">{exp.role}</h2>
 
             <p className="text-[#20C4CB] font-medium mt-1">{exp.company}</p>
 
-            <p className="text-sm text-gray-300 mt-1">{exp.duration}</p>
+            <p className={`text-sm mt-1 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>{exp.duration}</p>
 
-            <p className="mt-4 text-gray-200 leading-relaxed">
+            <p className={`mt-4 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
               {exp.description}
             </p>
           </div>

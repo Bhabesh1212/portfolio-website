@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Services = () => {
+  const { isDarkMode } = useContext(DarkModeContext);
   const [services] = useState([
     {
       id: "1",
@@ -27,7 +29,7 @@ const Services = () => {
   ]);
 
   return (
-    <section className="py-14 bg-slate-900 text-white" aria-labelledby="services-heading" id="services-section">
+    <section className={`py-14 transition-colors ${isDarkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}`} aria-labelledby="services-heading" id="services-section">
       <h2 id="services-heading" className="underline text-3xl md:text-4xl text-center font-bold">
         My Services
       </h2>
@@ -48,26 +50,28 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="
-                bg-slate-800 
-                hover:bg-slate-700 
+              className={`
                 rounded-xl 
                 shadow-lg 
                 p-6 
                 text-center 
                 transition
                 focus-within:ring-2 focus-within:ring-blue-500
-              "
+                ${isDarkMode 
+                  ? "bg-slate-800 hover:bg-slate-700" 
+                  : "bg-white hover:bg-gray-50"
+                }
+              `}
               role="listitem"
               aria-label={service.title}
             >
-              <i className={`${service.imagelink} mb-4`} aria-hidden="true"></i>
+              <i className={`${service.imagelink} mb-4 ${isDarkMode ? "text-[#20C4CB]" : "text-blue-500"}`} aria-hidden="true"></i>
 
               <h3 className="text-2xl md:text-3xl font-semibold mb-2">
                 {service.title}
               </h3>
 
-              <p className="text-sm md:text-base leading-relaxed">
+              <p className={`text-sm md:text-base leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
                 {service.description}
               </p>
 

@@ -16,18 +16,27 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
+      // Check dark mode from localStorage
+      const isDarkMode = JSON.parse(localStorage.getItem('darkMode') || 'false');
+      
       return (
         <div 
-          className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6"
+          className={`flex flex-col items-center justify-center min-h-screen p-6 transition-colors ${
+            isDarkMode ? "bg-slate-900" : "bg-gray-100"
+          }`}
           role="alert"
           aria-live="assertive"
         >
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-md text-center">
+          <div className={`rounded-lg shadow-lg p-8 max-w-md text-center ${
+            isDarkMode 
+              ? "bg-slate-800 text-white" 
+              : "bg-white text-gray-900"
+          }`}>
             <h1 className="text-3xl font-bold text-red-600 mb-4">Oops!</h1>
-            <p className="text-gray-700 mb-4">
+            <p className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
               Something went wrong while rendering this page.
             </p>
-            <p className="text-gray-500 text-sm mb-6 break-all">
+            <p className={`text-sm mb-6 break-all ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
               Error: {this.state.error?.message || 'Unknown error'}
             </p>
             <button

@@ -10,6 +10,7 @@ const WorkExperience = lazy(() => import('./components/WorkExperience'))
 const KeyProjectsAndProduct = lazy(() => import('./components/KeyProjectsAndProduct'))
 const Services = lazy(() => import('./components/Services'))
 const Expertise = lazy(() => import('./components/Expertise'))
+const Testimonials = lazy(() => import('./components/Testimonials'))
 const ContactForm = lazy(() => import('./components/ContactForm'))
 const Footer = lazy(() => import('./components/Footer'))
 
@@ -44,6 +45,9 @@ function App() {
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <Expertise/>
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <Testimonials/>
       </Suspense>
       <Suspense fallback={<SectionLoader />}>
         <ContactForm/>

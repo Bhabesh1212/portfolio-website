@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
+
 const Expertise = () => {
+  const { isDarkMode } = useContext(DarkModeContext);
   return (
     <section className="my-12" aria-labelledby="skills-heading" id="skills-section">
 
       {/* BOX SECTION */}
       <div
-        className="
+        className={`
           mt-10 
           w-full 
           py-14 
@@ -16,10 +20,10 @@ const Expertise = () => {
           items-center 
           justify-center 
           gap-12
-          bg-slate-900
-          text-white
           rounded-xl
-        "
+          transition-colors
+          ${isDarkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}
+        `}
       >
         {/* LEFT TEXT SECTION */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
@@ -28,7 +32,7 @@ const Expertise = () => {
               Skills & Tools
             </h2>
 
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className={`text-base md:text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
               My focus is on leveraging technology to build efficient and
               scalable solutions. I am deeply passionate about technology and its continuous
               evolution...
@@ -88,8 +92,7 @@ const Expertise = () => {
               <div
                 key={index}
                 role="listitem"
-                className="
-                  bg-gray-200 
+                className={`
                   w-fit 
                   px-4 
                   py-2 
@@ -99,11 +102,14 @@ const Expertise = () => {
                   hover:text-white 
                   cursor-pointer 
                   shadow
-                  text-black
                   text-sm md:text-base
                   transition
                   focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500
-                "
+                  ${isDarkMode 
+                    ? "bg-gray-700 text-white hover:text-white" 
+                    : "bg-gray-200 text-black"
+                  }
+                `}
                 tabIndex="0"
                 aria-label={`Skill: ${skill}`}
               >

@@ -1,7 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import Typed from "typed.js";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Banner = () => {
+  const { isDarkMode } = useContext(DarkModeContext);
   const el = useRef(null);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const Banner = () => {
   return (
     <div
       id="main-content"
-      className="
+      className={`
         w-full
         min-h-[45vh]
         flex
@@ -29,9 +31,10 @@ const Banner = () => {
         py-10
         px-5
         md:px-12
-        bg-slate-800
         mt-14
-      "
+        transition-colors
+        ${isDarkMode ? "bg-slate-900 text-white" : "bg-slate-800 text-white"}
+      `}
       role="main"
       aria-label="Banner section with introduction"
     >

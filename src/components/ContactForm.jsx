@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
+import { trackFormSubmission, trackContactFormEngagement } from "../utils/googleAnalytics";
 
 const ContactForm = () => {
+  const { isDarkMode } = useContext(DarkModeContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,6 +58,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    trackContactFormEngagement('submitted');
+    trackFormSubmission('contact-form');
 
     if (!validateForm()) {
       return;
@@ -97,7 +102,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact-section"
-      className="py-14 px-6 md:px-16 bg-gray-100"
+      className={`py-14 px-6 md:px-16 transition-colors ${isDarkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}`}
       aria-labelledby="contact-heading"
     >
       <div className="max-w-2xl mx-auto">
@@ -108,7 +113,7 @@ const ContactForm = () => {
           Get In Touch
         </h2>
 
-        <p className="text-center text-gray-600 mb-10">
+        <p className={`text-center mb-10 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
           Have a question or want to work together? Send me a message and I'll
           get back to you as soon as possible.
         </p>
@@ -141,7 +146,7 @@ const ContactForm = () => {
           <div className="flex flex-col">
             <label
               htmlFor="name"
-              className="text-sm font-semibold text-gray-700 mb-2"
+              className={`text-sm font-semibold mb-2 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
             >
               Name <span className="text-red-500">*</span>
             </label>
@@ -151,7 +156,11 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition"
+              className={`px-4 py-2 border rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition ${
+                isDarkMode 
+                  ? "bg-slate-800 border-slate-600 text-white placeholder-gray-400" 
+                  : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              }`}
               placeholder="Your name"
               disabled={isLoading}
               required
@@ -163,7 +172,7 @@ const ContactForm = () => {
           <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="text-sm font-semibold text-gray-700 mb-2"
+              className={`text-sm font-semibold mb-2 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
             >
               Email <span className="text-red-500">*</span>
             </label>
@@ -173,7 +182,11 @@ const ContactForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition"
+              className={`px-4 py-2 border rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition ${
+                isDarkMode 
+                  ? "bg-slate-800 border-slate-600 text-white placeholder-gray-400" 
+                  : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              }`}
               placeholder="your.email@example.com"
               disabled={isLoading}
               required
@@ -185,7 +198,7 @@ const ContactForm = () => {
           <div className="flex flex-col">
             <label
               htmlFor="subject"
-              className="text-sm font-semibold text-gray-700 mb-2"
+              className={`text-sm font-semibold mb-2 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
             >
               Subject <span className="text-red-500">*</span>
             </label>
@@ -195,7 +208,11 @@ const ContactForm = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition"
+              className={`px-4 py-2 border rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition ${
+                isDarkMode 
+                  ? "bg-slate-800 border-slate-600 text-white placeholder-gray-400" 
+                  : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              }`}
               placeholder="What is this about?"
               disabled={isLoading}
               required
@@ -207,7 +224,7 @@ const ContactForm = () => {
           <div className="flex flex-col">
             <label
               htmlFor="message"
-              className="text-sm font-semibold text-gray-700 mb-2"
+              className={`text-sm font-semibold mb-2 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
             >
               Message <span className="text-red-500">*</span>
             </label>
@@ -216,7 +233,11 @@ const ContactForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition resize-none"
+              className={`px-4 py-2 border rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition resize-none ${
+                isDarkMode 
+                  ? "bg-slate-800 border-slate-600 text-white placeholder-gray-400" 
+                  : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              }`}
               rows="5"
               placeholder="Your message here..."
               disabled={isLoading}
@@ -236,15 +257,19 @@ const ContactForm = () => {
           </button>
 
           {/* Form Requirements */}
-          <p className="text-xs text-gray-500 text-center">
+          <p className={`text-xs text-center ${isDarkMode ? "text-gray-500" : "text-gray-500"}`}>
             <span className="text-red-500">*</span> Required fields
           </p>
         </form>
 
         {/* Alternative Contact Methods */}
-        <div className="mt-10 p-6 bg-white rounded-lg border border-gray-200">
-          <h3 className="text-lg font-semibold mb-4">Other Ways to Reach Me</h3>
-          <div className="space-y-2 text-sm">
+        <div className={`mt-10 p-6 rounded-lg border transition-colors ${
+          isDarkMode 
+            ? "bg-slate-800 border-slate-700" 
+            : "bg-white border-gray-200"
+        }`}>
+          <h3 className={`text-lg font-semibold mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>Other Ways to Reach Me</h3>
+          <div className={`space-y-2 text-sm ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
             <p>
               📧 Email:{" "}
               <a
