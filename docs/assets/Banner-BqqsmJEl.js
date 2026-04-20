@@ -1,4 +1,4 @@
-import{a as e,i as t,o as n,r}from"./index-D23obv0y.js";import{t as i}from"./typed.module-eipIcyPJ.js";var a=n(e(),1),o=t(),s=()=>{let{isDarkMode:e}=(0,a.useContext)(r),t=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=new i(t.current,{strings:[`Backend Developer`,`Web Developer`],startDelay:100,typeSpeed:50,backSpeed:10,backDelay:100,loop:!0});return()=>e.destroy()},[]),(0,o.jsx)(`div`,{id:`main-content`,className:`
+import{a as e,i as t,o as n,r}from"./index-Ct9uMSpP.js";import{t as i}from"./typed.module-eipIcyPJ.js";var a=n(e(),1),o=t(),s=()=>{let{isDarkMode:e}=(0,a.useContext)(r),t=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=new i(t.current,{strings:[`Backend Developer`,`Web Developer`],startDelay:100,typeSpeed:50,backSpeed:10,backDelay:100,loop:!0});return()=>e.destroy()},[]),(0,o.jsx)(`div`,{id:`main-content`,className:`
         w-full
         min-h-[45vh]
         flex

@@ -1,0 +1,15 @@
+import{a as e,i as t,o as n,r}from"./index-Ct9uMSpP.js";import{t as i}from"./typed.module-eipIcyPJ.js";var a=n(e(),1),o=t(),s=()=>{let{isDarkMode:e}=(0,a.useContext)(r),t=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=new i(t.current,{strings:[`Crafted with passion for backend development. Let’s turn ideas into something extraordinary!`],startDelay:100,typeSpeed:30,backSpeed:20,backDelay:10,loop:!0});return()=>e.destroy()},[]),(0,o.jsxs)(`footer`,{className:`py-6 border-t flex flex-col items-center text-center px-5 transition-colors ${e?`bg-slate-900 text-white border-slate-800`:`bg-gray-100 text-gray-900 border-gray-200`}`,role:`contentinfo`,children:[(0,o.jsx)(`h2`,{className:`text-2xl md:text-2xl font-bold mt-8 mb-2 ${e?`text-white`:`text-gray-900`}`,children:`Let's Connect & Collaborate`}),(0,o.jsx)(`p`,{className:`text-sm max-w-xl ${e?`text-gray-400`:`text-gray-600`}`,children:`I am always open to discussing new opportunities, product challenges, and innovative ideas in the digital space.`}),(0,o.jsxs)(`div`,{className:`
+          mt-4
+          rounded-xl
+          shadow-lg
+          p-6
+          w-full
+          max-w-3xl
+          grid
+          grid-cols-1
+          md:grid-cols-3
+          gap-6
+          text-sm
+          transition-colors
+          ${e?`bg-slate-800 hover:bg-slate-700 text-white`:`bg-white hover:bg-gray-50 text-gray-900 border border-gray-200`}
+        `,role:`region`,"aria-label":`Contact information`,children:[(0,o.jsxs)(`div`,{className:`flex flex-col items-center`,children:[(0,o.jsx)(`span`,{className:`font-semibold`,children:`Email`}),(0,o.jsx)(`a`,{href:`mailto:bhabesh.barik.dev@gmail.com`,className:`hover:underline break-all mt-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded px-1 ${e?`text-gray-300`:`text-blue-500`}`,"aria-label":`Send me an email at bhabesh.barik.dev@gmail.com`,children:`bhabesh.barik.dev@gmail.com`})]}),(0,o.jsxs)(`div`,{className:`flex flex-col items-center`,children:[(0,o.jsx)(`span`,{className:`font-semibold`,children:`Mobile`}),(0,o.jsx)(`span`,{className:`mt-1 ${e?`text-gray-300`:`text-gray-700`}`,"aria-label":`Phone number: +91 8249878929`,children:`+91 8249878929`})]}),(0,o.jsxs)(`div`,{className:`flex flex-col items-center`,children:[(0,o.jsx)(`span`,{className:`font-semibold`,children:`Location`}),(0,o.jsx)(`span`,{className:`mt-1 ${e?`text-gray-300`:`text-gray-700`}`,"aria-label":`Located in Bhubaneswar, India`,children:`Bhubaneswar, India`})]})]}),(0,o.jsx)(`div`,{className:`mt-4 text-sm italic max-w-xs ${e?`text-gray-500`:`text-gray-600`}`,role:`status`,"aria-live":`polite`,children:(0,o.jsx)(`b`,{children:(0,o.jsx)(`span`,{ref:t})})}),(0,o.jsxs)(`p`,{className:`text-sm mt-3 ${e?`text-gray-400`:`text-gray-600`}`,children:[`© 2025 `,(0,o.jsx)(`b`,{children:`Bhabesh Ranjan Barik`}),` • Made with ❤️ using `,(0,o.jsx)(`b`,{children:`React`}),` • `,(0,o.jsx)(`b`,{children:`TailwindCSS`})]})]})};export{s as default};
